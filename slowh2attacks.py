@@ -4,7 +4,7 @@ import socket, ssl, logging, time, sys, argparse
 import h2.connection
 from h2.config import H2Configuration
 from hyperframe.frame import SettingsFrame, WindowUpdateFrame, HeadersFrame
-from hpack.hpack_compat import Encoder
+from hpack import Encoder
 
 PREAMBLE = b'PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n'
 WINDOW_INCREMENT_SIZE = 1073676289 # value used by curl measured during tests
